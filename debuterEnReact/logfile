@@ -1,0 +1,14 @@
+2023-01-11 14:22:43.574 CET [12332] FATAL:  lock file "postmaster.pid" already exists
+2023-01-11 14:22:43.574 CET [12332] HINT:  Is another postmaster (PID 4186) running in data directory "/home/capyque/opt/postgres-12/data"?
+2023-01-11 14:22:44.661 CET [12608] FATAL:  lock file "postmaster.pid" already exists
+2023-01-11 14:22:44.661 CET [12608] HINT:  Is another postmaster (PID 4186) running in data directory "/home/capyque/opt/postgres-12/data"?
+2023-01-11 14:22:58.773 CET [13291] FATAL:  lock file "postmaster.pid" already exists
+2023-01-11 14:22:58.773 CET [13291] HINT:  Is another postmaster (PID 4186) running in data directory "/home/capyque/opt/postgres-12/data"?
+2023-01-11 14:24:41.993 CET [14460] FATAL:  lock file "postmaster.pid" already exists
+2023-01-11 14:24:41.993 CET [14460] HINT:  Is another postmaster (PID 4186) running in data directory "/home/capyque/opt/postgres-12/data"?
+2023-01-11 14:24:43.147 CET [14756] FATAL:  lock file "postmaster.pid" already exists
+2023-01-11 14:24:43.147 CET [14756] HINT:  Is another postmaster (PID 4186) running in data directory "/home/capyque/opt/postgres-12/data"?
+2023-01-11 14:25:43.823 CET [15917] FATAL:  lock file "postmaster.pid" already exists
+2023-01-11 14:25:43.823 CET [15917] HINT:  Is another postmaster (PID 4186) running in data directory "/home/capyque/opt/postgres-12/data"?
+2023-01-11 14:26:20.987 CET [17122] FATAL:  lock file "postmaster.pid" already exists
+2023-01-11 14:26:20.987 CET [17122] HINT:  Is another postmaster (PID 4186) running in data directory "/home/capyque/opt/postgres-12/data"?

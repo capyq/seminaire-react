@@ -1,0 +1,78 @@
+.mainContent {
+    height: 40rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.mainContent>* {
+    flex: 1 1 auto
+}
+
+.mainContent>*:first-child,
+.mainContent>*:last-child {
+    flex: 0 0 auto
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2vh;
+    background: rgb(200, 200, 200, 50);
+    color: white;
+}
+
+.product-content-display {
+    overflow: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2vh;
+    width: inherit;
+}
+
+.product-content-display>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30vh;
+}
+
+.product-content-display>div>img {
+    max-height: 20vh;
+    max-width: 20vh;
+}
+
+.grid-2-col {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-content: start;
+}
+
+
+.lds-dual-ring {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+}
+
+.lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid rgb(149, 8, 8);
+    border-color: #fff transparent #fff transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@keyframes lds-dual-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
