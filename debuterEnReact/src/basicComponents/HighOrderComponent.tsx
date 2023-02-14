@@ -4,7 +4,7 @@ const HighOrderComponent = () => {
         <div>
             <HOC>
                 <div>
-                    <h1>Children</h1>
+                    <h1 id='high-order-component-child' >Children</h1>
                 </div>
             </HOC>
         </div>
@@ -16,11 +16,13 @@ type ParentProps = {
 }
 const HOC = (props: ParentProps) => {
     const { children } = props;
-    return <div>
-        <p>Adding Content Before</p>
-        {children}
-        <p>Adding Content After</p>
-    </div>
+    return (
+        <div id='high-order-component'>
+            <p id='high-order-component-before'>Adding Content Before</p>
+            {children}
+            <p id='high-order-component-after'>Adding Content After</p>
+        </div>
+    )
 }
 
 

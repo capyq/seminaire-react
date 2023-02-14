@@ -11,7 +11,7 @@ type PropsType = {
     text: string
 }
 function InnerComponent(props: PropsType) {
-    return <h2>{props.text}</h2>
+    return <h2 id='inner-component-header' >{props.text}</h2>
 }
 
 export default PropsComponent;

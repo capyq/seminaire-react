@@ -10,7 +10,7 @@ class StateComponent extends React.Component {
             this.setState({ titre: "newTitre" })
         }, 2000);
         return (
-            <h2>
+            <h2 id='state-component-header'>
                 {this.state.titre}
             </h2>
         )

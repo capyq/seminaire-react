@@ -15,7 +15,7 @@ function useDebounce(callback: () => void, dependencies: Array<any> = [], delay 
 function useTimeout(callback: () => void, delay = 1000) {
     // useRef prevent multiple useEffect triggering with function dependency
     const callbackRef = useRef(callback);
-    const timeoutRef = useRef<number>();
+    const timeoutRef = useRef<NodeJS.Timeout>();
 
     const set = useCallback(() => {
         timeoutRef.current = setTimeout(() => callbackRef.current(), delay);
@@ -85,15 +85,15 @@ const CustomHook = () => {
         <div>
             <p>handleChange </p>
             <ul>
-                <li>Pokemon {renderCountPokemon} times</li>
-                <li>Search {renderCountSearch} times</li>
-                <li>HandleChange {renderCountHandleChange} times</li>
-                <li>Render {renderCount} times</li>
+                <li id='render-counter-pokemon'>Pokemon {renderCountPokemon} times</li>
+                <li id='render-counter-search'>Search {renderCountSearch} times</li>
+                <li id='render-counter-change'>HandleChange {renderCountHandleChange} times</li>
+                <li id='render-counter-all'>Render {renderCount} times</li>
             </ul>
-            <input title="searchField" type="text" onChange={handleChange} />
+            <input data-testId="input" id='search-field' title="searchField" type="text" onChange={handleChange} />
             <div style={{ textAlign: "left" }}>
-                <ul>
-                    {pokemon?.map(p => <li key={p.name}>{p.name}</li>)}
+                <ul id='pokemon-list'>
+                    {pokemon?.map(p => <li id={`pokemon-item-${p.name}`} key={p.name}>{p.name}</li>)}
                 </ul>
             </div>
         </div>
