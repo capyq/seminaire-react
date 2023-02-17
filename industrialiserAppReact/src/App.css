@@ -1,0 +1,21 @@
+@layer main;
+
+@layer main {
+
+    .App {
+        margin: 2rem;
+        height: 90%;
+        background: red;
+        width: 90%;
+    }
+}
+
+
+@layer other {
+
+    .App {
+        margin: 2rem;
+        height: 90%;
+        width: 90%;
+    }
+}
