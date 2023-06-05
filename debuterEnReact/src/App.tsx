@@ -4,6 +4,7 @@ import './App.css';
 import MyFakeShop from './fakeShop/MyFakeShop';
 
 const pages = {
+  "basicJSTS": ["JavaScript", "TypeScript"],
   "basicComponents": ["StaticComponent", "PropsComponent", "StateComponent", "HighOrderComponent"],
   "basicHook": ["UseState", "UseEffect", "UseEffectWithDep", "UseCallback", "UseMemo", "UseReducer", "CustomHook"],
 }
