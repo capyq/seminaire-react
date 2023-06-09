@@ -1,4 +1,4 @@
-Points Clés 
+Points Clés
 
 => Refactoriser les composents en fragment plus petit
 

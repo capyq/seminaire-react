@@ -2,6 +2,7 @@
   display: flex;
   gap: 3rem;
   justify-content: center;
+  height: 40rem;
 }
 
 .center-hor>div {

@@ -2,18 +2,11 @@ import './StyleInfo.css';
 import { Button, TextField } from "@mui/material";
 import { useCallback, useEffect, useState } from 'react';
 import { getAll, Pokemon } from '../API';
+import Refactoring from '../exercice/refactoring/Refactoring';
+import HooksProposition from '../exercice/customHook/proposition/HooksProposition';
 
 let todos = [] as string[]
 const ComposantTest = () => {
-    const [click, setClick] = useState<number>(0);
-    const [text, setText] = useState<string>();
-    const [render, setRender] = useState<number>(0);
-    const addOne = useCallback(() => {
-        setClick(click + 1)
-    }, [])
-    useEffect(() => {
-        // setRender(render + 1);
-    })
 
     const [todoText, setTodoText] = useState<string>();
     const addTodo = () => {
@@ -22,30 +15,9 @@ const ComposantTest = () => {
             setTodoText("")
         }
     }
-
-    const [pokemons, setPokemons] = useState<Pokemon[]>([]);
-    const [filterPokemonText, setFilterPokemonText] = useState<string>("");
-    const [pokemonFilter, setPokemonFilter] = useState<Pokemon[]>([]);
-    useEffect(() => {
-        getAll().then(pok => setPokemons(pok))
-    }, [])
-    useEffect(() => {
-        setPokemonFilter(pokemons.filter(p => !filterPokemonText || p.name.indexOf(filterPokemonText) !== -1))
-    }, [filterPokemonText, pokemons])
     return (
         <div className="center-hor">
-            <div>
-                <h1> Basics </h1>
-                <p>Count click : {click}</p>
-                <p>Count text : {text}</p>
-                <p>Count render : {render}</p>
-                <TextField onChange={(e) => setText(e.target.value)} />
-                <Button
-                    variant="contained"
-                    onClick={addOne}>
-                    MyButton
-                </Button>
-            </div>
+            <Refactoring />
             <div>
                 <h1> Todos </h1>
 
@@ -71,13 +43,7 @@ const ComposantTest = () => {
                         </div>))}
                 </div>
             </div>
-            <div>
-                <h1>Pokemons</h1>
-                <TextField value={filterPokemonText} onChange={(e) => setFilterPokemonText(e.target.value)}></TextField>
-                <div style={{ maxHeight: "30rem", overflow: "auto" }}>
-                    {pokemonFilter.map(p => <p key={p.id}>{p.name}</p>)}
-                </div>
-            </div>
+            <HooksProposition />
         </div>
     )
 }
