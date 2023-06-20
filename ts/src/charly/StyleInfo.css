@@ -1,0 +1,5 @@
+.center-hor {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+}

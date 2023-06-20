@@ -1,0 +1,10 @@
+.center-hor {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+}
+
+.center-hor>div {
+  display: flex;
+  flex-direction: column;
+}
