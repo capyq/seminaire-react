@@ -13,5 +13,4 @@ const HooksProposition = () => {
         </div>
     )
 }
-
 export default HooksProposition;

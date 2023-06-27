@@ -1,9 +1,31 @@
+@layer main;
+@layer other;
+
+
+.center-hor {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    height: 40rem;
+}
+
+.center-hor>div {
+    display: flex;
+    flex-direction: column;
+    background-color: unset;
+}
+
 @layer main {
 
     .App {
         margin: 20rem;
         height: 9%;
         width: 90%;
+        background-color: lightgray;
+    }
+
+    .App>.center-hor>div {
+        background-color: lightgray;
     }
 }
 
@@ -14,5 +36,6 @@
         margin: 2rem;
         height: 90%;
         width: 90%;
+        background-color: lightpink;
     }
 }

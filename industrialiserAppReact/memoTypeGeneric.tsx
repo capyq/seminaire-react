@@ -11,3 +11,14 @@ const obj = {
 }
 
 const result = myFunc(obj, "name");
+
+
+type onlyArray<Tobj> = Tobj extends any[] ? Tobj : "need an array "
+
+
+const sendEvent = <Type extends Event["type"]>(
+    ...args: Extract<Event, { type: Type }> extends { payload: infer TPayload }
+        ? [Type, TPayload]
+        : [Type]
+) => { }
+

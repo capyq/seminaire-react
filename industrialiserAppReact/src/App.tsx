@@ -1,11 +1,13 @@
 import './App.css'
-import ComposantTest from './composantTest/ComposantTest'
+import Debuggage from './exercice/2_debuggage/Debuggage'
 
 function App() {
 
   return (
     <div className="App">
-      <ComposantTest />
+      <div className="center-hor">
+        <Debuggage />
+      </div>
     </div>
   )
 }

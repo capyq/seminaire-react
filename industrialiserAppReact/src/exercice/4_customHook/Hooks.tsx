@@ -2,7 +2,7 @@ import { TextField } from "@mui/material";
 import { useEffect, useState } from "react";
 import { getAll, Pokemon } from "../../API";
 
-const hooks = () => {
+const Hooks = () => {
     const [pokemons, setPokemons] = useState<Pokemon[]>([]);
     const [filterPokemonText, setFilterPokemonText] = useState<string>("");
     const [pokemonFilter, setPokemonFilter] = useState<Pokemon[]>([]);
@@ -24,4 +24,4 @@ const hooks = () => {
     )
 }
 
-export default hooks;
+export default Hooks;

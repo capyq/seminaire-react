@@ -2,13 +2,11 @@ Points Clés
 
 => Refactoriser les composents en fragment plus petit
 
-=> Utiliser des Custom Hook
-
 => Hook de debuggage
 
-=> Architecture de projet (Atomes / Molecules / Organismes)
-
 => Cycle de vie
+
+=> Utiliser des Custom Hook
 
 => Composant générique / spécifique ?
 
@@ -18,4 +16,8 @@ Points Clés
 
 => Ajout de Test
 
+=> Architecture de projet (Atomes / Molecules / Organismes)
+
 => ne pas utiliser de Ref pour contourner les dépendances.
+
+=> css layer / priorisation des tags => retirer les importants
