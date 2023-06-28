@@ -15,3 +15,5 @@ const compose = (data: any, mapper: any) => {
 }
 
 const value = compose(myObject, mapper)
+
+export { }
