@@ -18,6 +18,7 @@ bin-release/
 # information for Eclipse / Flash Builder.
 
 .history/*
+industrialiserAppReact/.history/*
 node_modules/*
 dist/*
 dist-ssr/*

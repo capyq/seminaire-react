@@ -1,15 +1,14 @@
-import './App.css'
-import Debuggage from './exercice/2_debuggage/Debuggage'
+import "./App.css";
+import Refactoring from "./exercice/1_refactoring/Refactoring";
 
 function App() {
-
   return (
     <div className="App">
       <div className="center-hor">
-        <Debuggage />
+        <Refactoring />
       </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

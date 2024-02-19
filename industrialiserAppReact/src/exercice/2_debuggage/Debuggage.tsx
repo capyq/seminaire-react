@@ -1,34 +1,50 @@
 import { Button, TextField } from "@mui/material";
 import { useState } from "react";
-import DataDisplay from "./DataDisplay";
-import TodoAdder from "./TodoAdder";
 
-// let todos = [] as string[]
-
+let todos = [] as string[];
 const Debuggage = () => {
-    const [todos, setTodos] = useState<string[]>([]);
-    const [countAdd, setCountAdd] = useState<number>(0);
-    const addTodo = (todoText: string) => {
-        if (todoText) {
-            todos.push(todoText);
-            setCountAdd(old => old + 1)
-        }
+  const [todoText, setTodoText] = useState<string>();
+  const addTodo = () => {
+    if (todoText) {
+      todos.push(todoText);
+      setTodoText("");
     }
+  };
+  return (
+    <div>
+      <div>
+        <h1> Todos </h1>
 
-    const removeItem = (id: number) => {
-        setTodos([...todos.slice(0, id), ...todos.slice(id + 1, todos.length)])
-        setCountAdd(old => old - 1)
-
-    }
-    return (
+        <span>list de Todos ({todos.length})</span>
         <div>
-            <h1> Todos </h1>
-            <span>list de Todos ({countAdd})</span>
-            <TodoAdder addTodo={addTodo} />
-
-            <DataDisplay data={todos} removeItem={removeItem} />
+          <TextField
+            value={todoText}
+            onChange={(e) => setTodoText(e.target.value)}
+          ></TextField>
+          <Button variant="contained" onClick={addTodo}>
+            AddTodo
+          </Button>
         </div>
-    )
-}
+        <div>
+          {todos.map((t, id) => (
+            <div>
+              {t}
+              <Button
+                variant="text"
+                onClick={() => {
+                  todos = [
+                    ...todos.slice(0, id),
+                    ...todos.slice(id + 1, todos.length),
+                  ];
+                }}
+                startIcon="X"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export default Debuggage;
