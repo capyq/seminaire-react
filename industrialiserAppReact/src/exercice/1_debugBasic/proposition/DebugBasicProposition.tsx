@@ -1,17 +1,17 @@
 import useRenderCount from "../../../hook/useRenderCount";
 import ClickerCount from "./ClickerCount";
-import SearchText from "./SearchText";
+import TickCounter from "./TickCounter";
 
-const RefactoringProposition = () => {
+const DebugBasicProposition = () => {
     const countRender = useRenderCount();
     return (
         <div>
             <h1> Basics </h1>
             <p>Count render : {countRender}</p>
-            <SearchText />
+            <TickCounter />
             <ClickerCount />
         </div>
     )
 }
 
-export default RefactoringProposition;
+export default DebugBasicProposition;

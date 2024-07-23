@@ -25,6 +25,7 @@
     "@types/use-sync-external-store": "^0.0.3",
     "@vitejs/plugin-react": "^2.2.0",
     "typescript": "^4.6.4",
-    "vite": "^3.2.3"
+    "vite": "^3.2.3",
+    "vitest": "^2.0.4"
   }
 }

@@ -1,5 +1,5 @@
 import "./App.css";
-import Refactoring from "./exercice/1_refactoring/Refactoring";
+import Refactoring from "./exercice/0_refactoring/Refactoring";
 
 function App() {
   return (
