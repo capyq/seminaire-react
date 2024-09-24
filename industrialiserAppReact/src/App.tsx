@@ -1,11 +1,11 @@
-import "./App.css";
-import Refactoring from "./exercice/0_refactoring/Refactoring";
+import './App.css';
+import Hooks from './exercice/7_customHook/Hooks';
 
 function App() {
   return (
     <div className="App">
       <div className="center-hor">
-        <Refactoring />
+        <Hooks />
       </div>
     </div>
   );
