@@ -49,6 +49,7 @@ const Home = () => {
 }
 const Shop = () => {
     const [products, setProducts] = useState<ProductType[]>();
+    console.log("🚀 QCA :  ~ Shop ~ products:", products?.reduce((acc,p)=> {acc[p.category] = (acc[p.category] || 0)+1; return acc},{} as Record<string,number>));
     const productList = useContext(ProductContext);
     useEffect(() => {
         fetch('https://fakestoreapi.com/products')
