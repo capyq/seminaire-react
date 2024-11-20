@@ -1,0 +1,31 @@
+// Vitest Snapshot v1
+
+exports[`Should render Child > the title is visible 1`] = `
+<body>
+  <div>
+    <div>
+      <div
+        id="high-order-component"
+      >
+        <p
+          id="high-order-component-before"
+        >
+          Adding Content Before
+        </p>
+        <div>
+          <h1
+            id="high-order-component-child"
+          >
+            Children
+          </h1>
+        </div>
+        <p
+          id="high-order-component-after"
+        >
+          Adding Content After
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+`;
