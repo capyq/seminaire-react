@@ -1,19 +1,25 @@
-
 // dans un fichier
 const myObject = {
-    a: 1,
-    b: 2,
-    c: 3,
-}
-const mapper = (data: typeof myObject) => {
-    return data.a * data.b + data.c
-}
+  a: 1,
+  b: '2',
+  c: true,
+};
+const myObject2 = {
+  main: 'gray-100',
+  hover: 'gray-200',
+  active: 'gray-200',
+} as const;
 
 // dans un autre fichier hook.
-const compose = (data: any, mapper: any) => {
-    return mapper(data)
-}
+type composeType = <TObj, TKey extends keyof TObj>(data: TObj, key: TKey) => TObj[TKey];
 
-const value = compose(myObject, mapper)
+const compose: composeType = (data, key) => {
+  return data[key];
+};
 
-export { }
+const value = compose(myObject, 'a');
+//      ^?
+
+const value2 = compose(myObject2, 'active');
+//      ^?
+export {};

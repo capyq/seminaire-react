@@ -1,16 +1,19 @@
 export type Event =
-    | {
-        type: "LOG_IN"
-        payload: {
-            userId: string
-        }
+  | {
+      type: 'LOG_IN';
+      payload: {
+        userId: string;
+      };
     }
-    | {
-        type: "SIGN_OUT"
-    }
+  | {
+      type: 'SIGN_OUT';
+      payload: never;
+    };
 
-const sendEvent = (eventType: Event["type"], payload?: any) => { }
+type EventType = Event['type'];
+type EventPayloadByType<TType extends EventType> = Extract<Event, { type: TType }>['payload'];
 
-sendEvent("LOG_IN", { userId: "toto" })
-sendEvent("SIGN_OUT", { userId: "toto" })
-//sendEvent("WRONG_KEY")
+const sendEvent = <TType extends EventType>(eventType: TType, payload: EventPayloadByType<TType>) => {};
+
+sendEvent('LOG_IN', { userId: 'toto' });
+sendEvent('SIGN_OUT', { userId: 'toto' });
